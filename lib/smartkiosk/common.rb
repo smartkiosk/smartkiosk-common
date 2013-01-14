@@ -1,4 +1,5 @@
 require "smartkiosk/common/version"
+require "smartkiosk/common/patches"
 require "smartkiosk/common/logging"
 
 module Smartkiosk
