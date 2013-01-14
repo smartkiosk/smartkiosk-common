@@ -4,6 +4,10 @@ module Smartkiosk
   module Common
     module Logging
 
+      def destination=(value)
+        @destination = value
+      end
+
       def service=(service)
         @service = service
       end
@@ -21,7 +25,7 @@ module Smartkiosk
       end
 
       def init
-        log = Logger.new(STDOUT)
+        log = Logger.new(@destination || STDOUT)
         log.level = Logger::DEBUG
         log.formatter = proc do |severity, time, progname, msg|
           Smartkiosk::Common::Logging.format @service, severity, time, progname, msg
