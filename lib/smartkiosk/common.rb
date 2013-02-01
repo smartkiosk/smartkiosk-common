@@ -1,3 +1,4 @@
+require "smartkiosk/payment"
 require "smartkiosk/common/version"
 require "smartkiosk/common/patches"
 require "smartkiosk/common/logging"
